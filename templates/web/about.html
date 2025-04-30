@@ -1,0 +1,472 @@
+{% extends 'web/basic.html' %} 
+{% load static %}
+
+{% block content %}
+
+
+    <section class="hero-section">
+        <h1>WHO WE ARE</h1>
+    </section>
+    
+    <style>
+    .hero-section {
+        position: relative;
+        background: url('{% static "image/Josh-About-Us.jpg" %}') no-repeat center center/cover;
+        height: 500px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: white;
+    }
+    
+    .hero-section h1 {
+        position: relative;
+        font-size: 7rem;
+        font-weight: bold;
+        text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7); /* Text ke piche halka shadow */
+    }
+    
+    @media (max-width: 768px) {
+        .hero-section {
+            height: 70vh; /* Mobile ke liye height adjust */
+        }
+        
+        .hero-section h1 {
+            font-size: 2rem; /* Mobile par text thoda chhota */
+        }
+    }
+    </style>
+        
+    <section class="why-esp-safety">
+        <div class="container">
+            <h2 class="section-title">WHY {% if obj.name %}{{obj.name}}{% else %}{% if obj.name %}{{obj.name}}{% else %}ESP Safety{% endif %}{% endif %}?</h2>
+            <div class="content-wrapper">
+                <div class="content-box">
+                    <h3>ABOUT MAX LT TECHNOLOGIES LLP</h3>
+                    <p>A fast-growing business, with headquarters in Gurgaon - Haryana, Max LT mission is to meet its customer needs. Serving a variety of customers from installers, integrators, end-users from small to large businesses - by offering a large portfolio, fast delivery, the best price, world-class technical support and ultimate customer experience. 
+                        Through our supply chain, we are able to provide the TOP brands in the market, therefore Max LT has a complete portfolio that includes Gas Detectors, Flame Detectors, Emerson DCS, Fire Alarm Systems, Fire Suppression Systems, CCTV, Access Control, and Intrusion. We deliver Pan India and have 100% customer satisfaction rates.
+                    </p>
+                </div>
+                <!-- <div class="content-box">
+                    <h3>ABOUT MAX LT TECHNOLOGIES LLP</h3>
+                    <p>Through our supply chain, we are able to provide the TOP brands in the market, therefore Max LT has a complete portfolio that includes Gas Detectors, Flame Detectors, Emerson DCS, Fire Alarm Systems, Fire Suppression Systems, CCTV, Access Control, and Intrusion. We deliver Pan India and have 100% customer satisfaction rates.</p>
+                </div> -->
+                
+            </div>
+            
+        </div>
+    </section>
+    
+    <style>
+        /* General Styles */
+        .why-esp-safety {
+            padding: 80px 0;
+            text-align: center;
+            background-color: #f8f8f8;
+        }
+    
+        .section-title1 {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 40px;
+            color: #ffff;
+        }
+    
+        .content-wrapper {
+            display: grid;
+            /* grid-template-columns: repeat(2, 1fr); */
+            gap: 50px;
+            /* max-width: 1100px; */
+            margin: 0 auto;
+        }
+    
+        .content-box {
+            background: #fff;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+    
+        .content-box:hover {
+            transform: translateY(-5px);
+        }
+    
+        h3 {
+            font-size: 22px;
+            font-weight: 600; /* Semi-bold */
+            margin-bottom: 15px;
+            color: #222;
+        }
+    
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #444;
+        }
+    
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .content-wrapper {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+    
+            .content-box {
+                max-width: 100%;
+            }
+        }
+    </style>
+
+
+<section class="our-products">
+    <div class="container">
+        <h2 class="section-title1">OUR PRODUCTS</h2>
+        <div class="products-grid">
+            <div class="product-item">
+                <img src="{% static 'image/flame-icon-red.png' %}" alt="Flame Detectors">
+                <p>Flame Detectors</p>
+            </div>
+            <div class="product-item">
+                <img src="{% static 'image/flame-icon-red.png' %}" alt="Oxygen Detectors">
+                <p>GAS DETECTORS</p>
+            </div>
+            <div class="product-item">
+                <img src="{% static 'image/flame-icon-red.png' %}" alt="Combustible Gas Detectors">
+                <p>ADDRESSABLE FIRE ALARM SYSTEM</p>
+            </div>
+            <div class="product-item">
+                <img src="{% static 'image/flame-icon-red.png' %}" alt="Controllers">
+                <p>ADDRESSABLE WIRELESS FIRE ALARM SYSTEM</p>
+            </div>
+            <div class="product-item">
+                <img src="{% static 'image/flame-icon-red.png' %}" alt="Toxic Gas Detectors">
+                <p>LINEAR HEAT SENSING CABLE</p>
+            </div>
+            <div class="product-item">
+                <img src="{% static 'image/flame-icon-red.png' %}" alt="Toxic Gas Detectors">
+                <p>FIRE SUPPRESSION SYSTEM</p>
+            </div>
+            <div class="product-item">
+                <img src="{% static 'image/flame-icon-red.png' %}" alt="Toxic Gas Detectors">
+                <p>EXPLOSION PROOF CCTV</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .our-products {
+        background: url('{% static "image/rent/detactor/fire_alarm.png" %}') center/cover no-repeat;
+        padding: 80px 0;
+        text-align: center;
+        position: relative;
+    }
+    .mission-p{
+        padding-left: 10%;
+    }
+    .vision-p{
+        padding-right: 10%;
+    }
+
+    .container {
+        position: relative;
+        z-index: 2;
+    }
+
+    .section-title {
+        font-size: 36px;
+        font-weight: bold;
+        color: rgb(51, 48, 48);
+        margin-bottom: 40px;
+    }
+
+    .products-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 50px;
+    }
+
+    .product-item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: white;
+        font-size: 18px;
+        font-weight: bold;
+        transition: transform 0.3s ease;
+    }
+    .product-item p {
+        color: white;
+    }
+
+    .product-item img {
+        width: 50px;
+        height: 50px;
+        border: 2px solid red;
+        border-radius: 50%;
+        padding: 10px;
+    }
+
+    .product-item:hover {
+        transform: scale(1.1);
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .products-grid {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .product-item {
+            justify-content: center;
+        }
+    }
+</style>
+
+<section class="mission-vision-section">
+    <div class="container">
+        <div class="content">
+            <div class="mission">
+                <h2>Our Mission</h2>
+                <p class="mission-p">Max LT mission is to offer the most complete portfolio of quality life safety and security equipment. Through our customer focus we are constantly working within our supply chain to offer the TOP brands in the market. and guarantee the highest product availability, shortest delivery time, greatest customer satisfaction rates, world-class technical support, and the best price. So, our customers can give us the opportunity of being their Security partner.</p>
+            </div>
+            <div class="divider"></div>
+            <div class="vision">
+                <h2>Our Vision</h2>
+                <p class="vision-p">To be customer’s first choice in life safety and security equipment by meeting their needs as “one-stop-shop” for product availability, quality, price, technical support and customer service.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .mission-vision-section {
+        background-color: #d4d0d0;
+        padding: 60px 0;
+    }
+
+    .container {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        text-align: center;
+    }
+
+    .mission, .vision {
+        width: 45%;
+    }
+
+    h2 {
+        font-size: 28px;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    p {
+        font-size: 18px;
+        line-height: 1.6;
+        color: #333;
+        text-align: left;
+    }
+
+    .divider {
+        width: 4px; /* Increased thickness */
+        background-color: white;
+        height: 200px;
+        align-self: center;
+    }
+
+    @media (max-width: 768px) {
+        .content {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .mission, .vision {
+            width: 100%;
+        }
+
+        .divider {
+            width: 100%;
+            height: 4px; /* Increased thickness for mobile */
+            margin: 20px 0;
+        }
+
+        p {
+            text-align: center;
+        }
+    }
+</style>
+
+<section class="our-values">
+    <h2>OUR VALUES</h2>
+    <div class="values-container">
+        <div class="value-card">We value transparent and trustful relationships with our clients, partners, and employees, resulting in a sustainable business.
+            We keep our promises, and we are committed to doing business the right way, leading to a high level of customer satisfaction.
+            We foster respect and collaboration and empower people to act as owners, improving everyday tasks to achieve company and personal goals.</div>
+        <!-- <div class="value-card">Integrity</div>
+        <div class="value-card">Innovation</div>
+        <div class="value-card">Teamwork</div>
+        <div class="value-card">Excellence</div>
+        <div class="value-card">Customer Focus</div> -->
+    </div>
+</section>
+
+<style>
+.our-values {
+    background: url('{% static "image/rent/detactor/about.png" %}') center/cover no-repeat;
+    padding: 60px 20px; /* Adjusted padding to remove extra space */
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+.our-values h2 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.values-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.value-card {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    border-radius: 10px;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .values-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .value-card {
+        width: 80%;
+    }
+}
+</style>
+
+
+<!-- <section class="commitment">
+    <h2>OUR COMMITMENT</h2>
+    <p>{% if obj.name %}{{obj.name}}{% else %}ESP Safety{% endif %} is committed to an operating philosophy based on openness in communication, integrity in serving our customers, fairness and concern for our employees and responsibility to the communities where we operate.</p>
+    <p>Our vision is to exceed customer expectations for quality, safety, sustainability, cost, delivery and value. Additionally, we are dedicated to creating a business culture that is based on the following principles:</p>
+
+    <div class="commitment-container">
+        <div class="commitment-card">
+            <h3>OUR COMMUNITY</h3>
+            <p>{% if obj.name %}{{obj.name}}{% else %}ESP Safety{% endif %} is committed to supporting the communities where operate. We believe in the practice of social responsibility and encourage similar behavior in our employees and suppliers.</p>
+        </div>
+        <div class="commitment-card">
+            <h3>OUR PEOPLE</h3>
+            <p>{% if obj.name %}{{obj.name}}{% else %}ESP Safety{% endif %} is committed to equality in employment opportunity. As a global company, we embrace wholeheartedly the cultural diversity within the communities we call home. Our people come first in everything we do.</p>
+        </div>
+        <div class="commitment-card">
+            <h3>OUR QUALITY</h3>
+            <p>{% if obj.name %}{{obj.name}}{% else %}ESP Safety{% endif %} is committed to achieving competitive excellence and providing our customers with products and services designed, produced and maintained to meet or exceed their expectations.</p>
+        </div>
+        <div class="commitment-card">
+            <h3>OUR CUSTOMERS</h3>
+            <p>{% if obj.name %}{{obj.name}}{% else %}ESP Safety{% endif %} is committed to our customer’s needs and we strive to exceed expectations in everything we do.  We are inspired and driven to address what they need today while continually anticipating what they might need tomorrow.</p>
+        </div>
+    </div>
+</section>
+
+<style>
+/* Commitment Section */
+.commitment {
+    text-align: center;
+    padding: 60px 30px; /* Reduced left-right space */
+    background: url('{% static "your-image.jpg" %}') center/cover no-repeat;
+    color: white;
+}
+
+/* Heading Styling */
+.commitment h2 {
+    font-size: 38px;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 15px;
+}
+
+/* Text Styling */
+.commitment p {
+    font-size: 18px;
+    margin: 0 auto 20px;
+    text-align: center; /* Achha readability milega */
+    padding: 0 10px; /* Left-Right padding kam ki */
+}
+
+
+/* Card Container */
+.commitment-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+/* Individual Cards */
+.commitment-card {
+    background: rgba(255, 255, 255, 0.3);
+    color: white;
+    padding: 25px;
+    font-size: 18px;
+    text-align: center;
+    border-radius: 12px;
+    width: 45%;
+    min-width: 280px;
+}
+
+/* Card Titles */
+.commitment-card h3 {
+    font-size: 28px; /* Increased font size */
+    margin-bottom: 10px;
+}
+
+/* Card Text */
+.commitment-card p {
+    font-weight: normal; /* Removed bold */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .commitment p {
+        text-align: center;
+    }
+
+    .commitment-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .commitment-card {
+        width: 100%;
+    }
+}
+</style> -->
+
+
+
+{% endblock content %}

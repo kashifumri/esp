@@ -1,0 +1,536 @@
+{% extends 'web/basic.html' %} 
+{% load static %}
+
+{% block content %}
+
+    <section class="hero-section">
+        <h1>TGAES</h1>
+    </section>
+    
+    <style>
+    .hero-section {
+        position: relative;
+        background: url('{% static "image/Josh-Combustible-Gas.jpg" %}') no-repeat center center/cover;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: white;
+    }
+    
+    .hero-section h1 {
+        position: relative;
+        font-size: 2.5rem;
+        font-weight: bold;
+        text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7); /* Text ke piche halka shadow */
+    }
+    
+    @media (max-width: 768px) {
+        .hero-section {
+            height: 70vh; /* Mobile ke liye height adjust */
+        }
+        
+        .hero-section h1 {
+            font-size: 2rem; /* Mobile par text thoda chhota */
+        }
+    }
+    </style>
+
+<section class="gas">
+    <div class="image-section">
+        <img src="{% static 'image/tgaes.jpg' %}" alt="Main Image" class="main-img">
+        <div class="bottom-section">
+            <img src="{% static 'image/tgaes1.jpg' %}" alt="Small Image" class="small-img">
+            <img src="{% static 'image/tgaes2.jpg' %}" alt="Small Image" class="small-img">
+            <button class="view-all">VIEW ALL</button>
+        </div>
+    </div>
+    <div class="text-section">
+        <p class="bold-text">COMBUSTIBLE GAS DETECTORS</p>
+        <h2>TGAES</h2>
+        <div class="scroll-box">
+            <p>The TGAES Gas Detector is an open path infrared gas detection system that provides continuous monitoring of combustible hydrocarbon gas concentrations at a distance of 15 to 650 feet (5 to 200 meters). No direct electrical connection between the two modules is required. In some applications, one TGAES detection system can provide protection equivalent to as many as eight point detectors.</p>
+            <p>The TGAES transmitter module illuminates a direct linear path ending at the TGAES receiver module. As flammable hydrocarbon gases intersect the light beam between the two modules, certain IR wavelengths are absorbed by the gas providing reliable gas detection.</p>
+            <p>TGAES has two built-in heaters to protect optics and internal electronics from condensation. The built-in continuous self-check function will notify you if anything is obstructing optical path or circuit integrity problems. The units comes with multiple outputs as standard option and you can choose whether to connect via 4-20mA, RS485 or relays to your system for reliable communication. The detector comes in stainless steel explosion proof housing.</p>
+            <p>TGAES Open Gas Detection System is the excellent choice for perimeter monitoring and applications where combustible gas leaks can happen over a widely dispersed area.</p>
+        </div>
+        <div class="btn-container">
+            <a href="#" class="request-btn">REQUEST QUOTE</a>
+            <a href="{% static 'pdf/UPES.pdf' %}" class="download-btn" download>DOWNLOAD PDF</a>
+        </div>
+        
+    </div>
+</section>
+
+<!-- Modal for Image Gallery -->
+<div class="image-modal">
+    <span class="close-btn">&times;</span>
+    <div class="modal-content">
+        <button class="prev-btn">&#10094;</button>
+        <img src="{% static 'image/tgaes3.jpg' %}" alt="Preview Image" class="preview-img">
+        <button class="next-btn">&#10095;</button>
+    </div>
+</div>
+
+<style>
+    .gas {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 20px;
+        background-color: #D3D3D3;
+        padding: 20px;
+    }
+
+    .image-section {
+        position: relative;
+        width: 50%;
+    }
+
+    .main-img {
+        background-color: #fff;
+        width: 100%;
+        display: block;
+    }
+
+    .bottom-section {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        justify-content: flex-start;
+        margin-top: 10px;
+        padding-left: 20px;
+    }
+
+    .small-img {
+        width: 220px;
+        height: 140px;
+        background-color: #ffffff;
+        padding: 5px;
+        border-radius: 5px;
+    }
+
+    .view-all {
+        padding: 12px 20px;
+        height: 140px;
+        width: 160px;
+        font-size: 20px;
+        font-weight: bold;
+        background-color: #808080;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+
+    .text-section {
+    width: 45%;
+}
+
+.bold-text {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* Scrollable Text Box */
+.scroll-box {
+    height: 300px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+/* Buttons outside scroll */
+.btn-container {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.request-btn, .download-btn {
+    display: block;
+    padding: 10px 20px;
+    border: 2px solid #d61c22;
+    color: #d61c22;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    transition: background 0.3s, color 0.3s;
+    margin: 15px auto;
+    width: 80%;
+    border-radius: 5px;
+    background: transparent;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.request-btn:hover, .download-btn:hover {
+    background: #d61c22;
+    color: #fff;
+}
+
+/* Responsive Fix */
+@media (max-width: 768px) {
+    .text-section {
+        width: 100%;
+    }
+    .btn-container {
+        justify-content: center;
+    }
+}
+@media (max-width: 480px) {
+    .btn-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .request-btn, .download-btn {
+        width: 80%;
+    }
+}
+
+    /* Modal Styling */
+    .image-modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.8);
+        justify-content: center;
+        align-items: center;
+    }
+
+    .modal-content {
+        position: relative;
+        max-width: 600px;
+    }
+
+    .preview-img {
+        width: 100%;
+        background-color: #ffffff;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    .close-btn, .prev-btn, .next-btn {
+        position: absolute;
+        background: #808080;
+        color: #fff;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+        padding: 12px;
+        border-radius: 5px;
+    }
+
+    .close-btn { top: 10px; right: 15px; }
+    .prev-btn { left: 10px; top: 50%; transform: translateY(-50%); }
+    .next-btn { right: 10px; top: 50%; transform: translateY(-50%); }
+
+    @media (max-width: 768px) {
+    .main-img {
+        width: 200%; /* Increase width to full */
+        height: auto;
+        max-height: 350px; /* Adjust height */
+    }
+
+    .bottom-section {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding-left: 0;
+    }
+
+    .small-img, .view-all {
+        width: auto;
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+</style>
+
+<script>
+    const viewAllBtn = document.querySelector('.view-all');
+    const modal = document.querySelector('.image-modal');
+    const closeBtn = document.querySelector('.close-btn');
+    const prevBtn = document.querySelector('.prev-btn');
+    const nextBtn = document.querySelector('.next-btn');
+    const previewImg = document.querySelector('.preview-img');
+
+    const images = ["image/tgaes.jpg", "image/tgaes1.jpg", "image/tgaes2.jpg", "image/tgaes3.jpg", "image/tgaes4.jpg", "image/tgaes5.jpg" ];
+    let currentIndex = 0;
+
+    viewAllBtn.addEventListener('click', () => {
+        modal.style.display = "flex";
+        previewImg.src = images[currentIndex];
+    });
+
+    closeBtn.addEventListener('click', () => {
+        modal.style.display = "none";
+    });
+
+    prevBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        previewImg.src = images[currentIndex];
+    });
+
+    nextBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex + 1) % images.length;
+        previewImg.src = images[currentIndex];
+    });
+</script>
+
+
+
+<section class="image-text-section">
+    <div class="image-text-container">
+        <div class="image-text-box">
+            <img src="{% static 'image/flame-icon-red.png' %}" alt="Image 1">
+            <div class="text-content">
+                <h3>The longest detection range</h3>
+                <p>Monitors a path distance of up to 650ft (200m).</p>
+            </div>
+        </div>
+        <div class="image-text-box">
+            <img src="{% static 'image/flame-icon-red.png' %}" alt="Image 2">
+            <div class="text-content">
+                <h3>Operates at any outdoor conditions</h3>
+                <p>TGAES distinguishes hydrocarbon gas even when obscured by rain, fog, dust, snow or blowing sand.</p>
+            </div>
+        </div>
+        <div class="image-text-box">
+            <img src="{% static 'image/flame-icon-red.png' %}" alt="Image 3">
+            <div class="text-content">
+                <h3>Easy Alignment</h3>
+                <p>Use HART communicator or software via RS485 for the fine alignment.</p>
+            </div>
+        </div>
+        <div class="image-text-box">
+            <img src="{% static 'image/flame-icon-red.png' %}" alt="Image 4">
+            <div class="text-content">
+                <h3>3 year warranty</h3>
+                <p>Long reliable product life, low cost to operate over time</p>
+            </div>
+        </div>
+    </div>
+    <div class="btn-container">
+        <a href="#" class="request-btn">SPECIFICATIONS</a>
+        <a href="#" class="request-btn">APPLICATIONS</a>
+        <a href="#" class="request-btn">ACCESSIORES</a>
+        <a href="#" class="request-btn">TYPES OF GASES</a>
+    </div>
+</section>
+
+<style>
+.image-text-section {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+}
+
+.image-text-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.image-text-box {
+    display: flex;
+    align-items: flex-start; /* Align items to the top */
+    gap: 10px;
+    width: 23%;
+}
+
+.image-text-box img {
+    width: 60px;
+    height: 60px;
+    align-self: flex-start; /* Ensure image stays at the top */
+}
+
+.text-content h3 {
+    font-size: 20px;
+}
+
+.text-content p {
+    font-size: 16px;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: flex-start; /* Align buttons to the left */
+    gap: 20px; /* Increase space between buttons */
+    margin-top: 20px;
+}
+
+
+
+.request-btn {
+    padding: 15px 40px; /* Increase button padding for larger size */
+    width: 45%; /* Make buttons wider */
+    font-size: 18px; /* Increase text size */
+    text-align: center; /* Center text inside button */
+    white-space: nowrap; /* Prevent text from breaking */
+    overflow: hidden; /* Ensure text stays inside */
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    .image-text-box {
+        flex-direction: column; /* Stack image on top of text */
+        align-items: center;
+        text-align: center;
+        width: 48%;
+    }
+
+    .image-text-box img {
+        order: -1; /* Ensure image appears at the top */
+        align-self: center;
+    }
+    .btn-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 10px;
+    }
+
+    .request-btn {
+        width: calc(50% - 10px); /* 2 buttons per row with gap */
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .image-text-box {
+        width: 100%;
+    }
+
+    .image-text-box img {
+        align-self: center;
+    }
+    .request-btn {
+        width: 100%;
+    }
+}
+</style>
+
+
+<section class="section-container">
+    <div class="section-box">
+        <div class="section-heading">Electrical Specifications</div>
+        <p><b>Power Requirements:</b> 24VDC Nominal (18 to 32 VDC)</p>
+        <p><b>Power Consumption:</b> Transmitter 15 W, Receiver 15 W*</p>
+        <p>*low power consumption version available upon request</p>
+        <p><b>Signal Outputs:</b> 4 to 20mA analog, Digital RS-485 MODBUS RTU, HART, Relays</p>
+        <p><b>Factory Default Settings:</b></p>
+        <p>Normally Open</p>
+        <p>Normally Closed</p>
+        <p><b>Alarm Relays:</b></p>
+        <p>2 User Programmed Alarm Relays (Factory Default Setting: NO)</p>
+        <p>1 Fault Condition Programmed Relay (Factory Default Setting: NC)</p>
+    </div>
+    <div class="section-box">
+        <div class="section-heading">Mechanical Specifications</div>
+        <p>U19 rack mount controller</p>
+        <p><b>Ingress Protection:</b> IP66</p>
+        <p><b>Operating Temperature:</b> -40⁰ F to +140⁰ F (-40⁰ C to +60⁰ C)</p>
+        <p><b>Storage Temperature:</b> -40⁰ F to +140⁰ F (-40⁰ C to 50 °C)</p>
+        <p><b>Humidity Range:</b> Up to 100% Relative Humidity, Non-Condensing (withstands up to 100% realtive humidity for short periods)</p>
+        <p><b>Conduit Connection:</b> 2 Cable Entries, ¾” NPT</p>
+        <p><b>Enclosure Material:</b> Stainless Steel (Grade 316L)</p>
+        <p><b>Dimensions:</b> 10.43” x 6.96” x 7.17” (262mm x 176mm x 182mm)</p>
+        <p><b>Weight:</b> 16.5lb (7.5kg), Each Module w/ Bracket</p>
+    </div>
+</section>
+
+<section class="section-container">
+    <div class="section-box">
+        <div class="section-heading">Performance Specifications</div>
+        <p><b>Gas Detection Range:</b> 0 to 1 LEL•m,  0 to 2.5 LEL•m,  0 to 5 LEL•m (Factory Default Setting)</p>
+        <p><b>Measuring Distance:</b> 15 ft to 650 ft (5m to 200m)</p>
+        <p>* A set of apertures, mounted on the transmitter, is provided for operation at distances less than 60m</p>
+    </div>
+</section>
+
+<style>
+    .section-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 20px;
+        gap: 20px;
+    }
+    .section-box {
+        flex: 1;
+        padding: 20px;
+        border-radius: 8px;
+    }
+    .section-heading {
+        font-size: 26px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+    @media (max-width: 768px) {
+        .section-container {
+            flex-direction: column;
+        }
+    }
+</style>
+
+<section class="customer-center-section">
+    <div class="customer-center-content">
+        <p class="customer-text">VISIT OUR CUSTOMER CENTER FOR PRODUCT RESOURCES</p>
+        <a href="#" class="customer-btn">TGAES RESOURCES</a>
+    </div>
+</section>
+
+<style>
+.customer-center-section {
+    background-color: #D3D3D3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.customer-center-content {
+    max-width: 700px;
+    text-align: center; /* Ensures text and button are centered */
+}
+
+.customer-text {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.customer-btn {
+    display: inline-block; /* Makes it center-friendly */
+    padding: 12px 20px;
+    border: 2px solid #d61c22;
+    color: #d61c22;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: background 0.3s, color 0.3s;
+    background-color: #fff;
+    cursor: pointer;
+    margin: 0 auto; /* Centers the button */
+}
+
+.customer-btn:hover {
+    background-color: #d61c22;
+    color: #fff;
+}
+</style>
+{% endblock content %}

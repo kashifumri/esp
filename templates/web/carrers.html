@@ -1,0 +1,416 @@
+{% extends 'web/basic.html' %} 
+{% load static %}
+
+{% block content %}
+
+    <section class="hero-section">
+        <h1>CARRERS</h1>
+    </section>
+    
+    <style>
+    .hero-section {
+        position: relative;
+        background: url('{% static "image/carrers.png" %}') no-repeat center center/cover;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: white;
+    }
+    
+    .hero-section h1 {
+        position: relative;
+        font-size: 7rem;
+        font-weight: bold;
+        text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7); /* Text ke piche halka shadow */
+    }
+    
+    @media (max-width: 768px) {
+        .hero-section {
+            height: 70vh; /* Mobile ke liye height adjust */
+        }
+        
+        .hero-section h1 {
+            font-size: 2rem; /* Mobile par text thoda chhota */
+        }
+    }
+    </style>
+
+<section class="join-our-team">
+    <h2>Join Our Team</h2>
+    <p>What does ESP stand for? Some say Extra Smart People work here, other ESPians believe our motto is Enthusiastically Solving Problems.</p>
+    <p>For over fifty years ESP Safety has been protecting our customers with a full line of flame and gas detectors. We are committed to using cutting edge technology to make the world a safer place as we continue address the industry challenges of today and the future. With more than 250 employees worldwide, each location operates independently.</p>
+    <p>We believe a healthy work life balance is a high priority, but when the need arises we always do what it takes to make it happen. Our culture is based on a collaborative approach and we are committed to equality in employment opportunity. As a global company, we wholeheartedly embrace the cultural diversity within the communities we call home. When you join us you will see we are a diverse group that maintains a sense of humor and accepts everyone for who they are while working with enthusiasm, commitment, and integrity.</p>
+    <p>Join one of our teams in San Jose, CA or Houston, TX to be a part of something bigger.</p>
+</section>
+
+<style>
+.join-our-team {
+    text-align: center;
+    padding: 50px 5%;
+}
+
+.join-our-team h2 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.join-our-team p {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 15px;
+}
+</style>
+
+<section class="employee-testimonials">
+    <h2>EMPLOYEE TESTIMONIALS</h2>
+    <div class="testimonial-container">
+        <div class="testimonial">
+            <img src="{% static 'image/emp.png' %}" alt="Employee 1">
+            <p>“I like working at ESP Safety because it is full of challenging opportunities. As an Applications Engineer, I work with a dedicated team of professionals that help me resolve challenging problems and provide me with the tools to address every technical problem to meet our customer’s expectations.”</p>
+        </div>
+        <div class="testimonial">
+            <img src="{% static 'image/emp1.png' %}" alt="Employee 2">
+            <p>“The work is challenging—in a good way—that keeps things interesting, and my co-workers are friendly and supportive.”</p>
+        </div>
+        <div class="testimonial">
+            <img src="{% static 'image/emp2.png' %}" alt="Employee 3">
+            <p>“Working at ESP Safety is great for many reasons. Not only are all of its employees friendly and super nice, you learn so much from them and they never fail to answer your questions as well as aid you in anything you need. Also, all the projects at ESP Safety are exciting and it never gets boring around here. In addition to all that, it has the most wonderful COO.”</p>
+        </div>
+    </div>
+</section>
+
+<style>
+.employee-testimonials {
+    text-align: center;
+    padding: 50px 10%;
+    background-color: #f4f4f4;
+}
+
+.employee-testimonials h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.testimonial-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    justify-content: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.testimonial {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+
+.testimonial img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 4px solid #FFD700;
+    margin-bottom: 15px;
+}
+
+.testimonial p {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.5;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .testimonial-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .testimonial-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+</style>
+
+<section class="why-join-us">
+    <h2>WHY JOIN US?</h2>
+    <div class="values-container">
+        <div class="value-card">
+            <h3>Safety</h3>
+            <p>We prioritize safety in every aspect of our work environment.</p>
+        </div>
+        <div class="value-card">
+            <h3>Integrity</h3>
+            <p>We uphold honesty and strong moral principles in all that we do.</p>
+        </div>
+        <div class="value-card">
+            <h3>Innovation</h3>
+            <p>We constantly push boundaries to develop cutting-edge solutions.</p>
+        </div>
+        <div class="value-card">
+            <h3>Teamwork</h3>
+            <p>Collaboration is at the core of our success and growth.</p>
+        </div>
+        <div class="value-card">
+            <h3>Excellence</h3>
+            <p>We strive for the highest quality in everything we deliver.</p>
+        </div>
+        <div class="value-card">
+            <h3>Customer Focus</h3>
+            <p>Our customers' needs drive our passion for exceptional service.</p>
+        </div>
+    </div>
+</section>
+
+<style>
+.why-join-us {
+    background: url('{% static "image/about.jpg" %}') center/cover no-repeat;
+    padding: 60px 20px;
+    text-align: center;
+    color: white;
+}
+
+.why-join-us h2 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.values-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-content: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.value-card {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 20px;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    border: 2px solid #E27029;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.value-card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.value-card p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.4;
+}
+
+.value-card:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-5px);
+    border-color: #ff6600;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .values-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .values-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+</style>
+
+<section class="ready-to-join">
+    <h2>READY TO JOIN?</h2>
+    <p>We are seeking candidates who thrive in a fast-paced, entrepreneurial environment, love to challenge themselves, are committed to providing quality products and service while keeping safety at the forefront of their minds. Ready to join? Apply for the open positions below. Don’t see a role that fits your profile? Feel free to apply with our general application!</p>
+    <a href="#" class="btn">GENERAL APPLICATION</a>
+    <p class="equal-opportunity">ESP Safety is an Equal Opportunity Employer</p>
+</section>
+
+<section class="about-section">
+    <div class="about-content">
+        <h2>ABOUT ESP SAFETY</h2>
+        <p>Founded in 1973, ESP Safety has grown into a leading fire and gas detection company providing products and services to some of the largest global oil and gas producers in the world. Our corporate headquarters and Technology and Training Center is located in San Jose, California.</p>
+        <a href="#" class="btn-custom">LEARN MORE</a>
+    </div>
+</section>
+
+<style>
+/* READY TO JOIN SECTION */
+.ready-to-join {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #ffffff;
+}
+
+.ready-to-join h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.ready-to-join p {
+    font-size: 16px;
+    max-width: 1200px;
+    margin: 0 auto 20px;
+    color: #333;
+    padding: 0 30px; /* Increased left and right padding */
+}
+
+
+.btn {
+    display: inline-block;
+    background-color: #E27029;
+    color: #fff;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border: 2px solid #E27029;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #fff;
+    color: #E27029;
+    border: 2px solid #E27029;
+}
+.btn:focus {
+    outline: none;
+    box-shadow: none;
+    background-color: #E27029;
+    border: 2px solid #E27029;
+    color: #fff;
+}
+
+
+.equal-opportunity {
+    margin-top: 30px;
+    font-size: 14px;
+    color: #555;
+}
+
+/* ABOUT ESP SAFETY SECTION */
+.about-section {
+    justify-content: flex-end; /* Text को Right Side पर Shift किया */
+    min-height: 350px;
+    background-size: 45%; /* Image की Width को थोड़ा छोटा किया */
+    background-position: left center; /* Image को Left में Set किया */
+            background: url('{% static "image/Josh-About-Us.jpg" %}') center/cover no-repeat;
+        }
+
+        .about-content {
+    width: 50%;
+    margin-left: auto; /* Text को Right Side में भेजा */
+    background: rgba(255, 255, 255, 0.9); 
+    min-height: 400px; /* Text section की height बढ़ाई */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Text aur button dono ko center kiya */
+    text-align: center;
+}
+       
+        .about-content h2 {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+
+        .about-content p {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .btn-custom {
+    display: inline-block;
+    background-color: #E27029;
+    color: #fff;
+    padding: 10px 8px; /* Height badhane ke liye padding top-bottom ko increase kiya */
+    font-size: 14px;
+    font-weight: bold;
+    border: 2px solid #E27029;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    text-decoration: none;
+    width: fit-content;
+    min-width: auto;
+}
+
+.btn-custom:hover {
+    background-color: #fff;
+    color: #E27029;
+    border: 2px solid #E27029;
+}
+
+@media (max-width: 768px) {
+    .btn-custom {
+        width: 100%; /* Small screen par button ki width full kar di */
+        padding: 12px 10px; /* Height bhi thodi badhayi */
+        text-align: center;
+    }
+}
+
+
+        /* RESPONSIVE DESIGN */
+        @media (max-width: 1024px) {
+            .about-section {
+                min-height: 500px; /* Image ki height badhayi */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+    }
+
+    .about-content {
+        width: 100%;
+        height: 100%; /* Pure image ke upar cover ho */
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: rgba(0, 0, 0, 0.6);
+        padding: 30px;
+        color: white;
+        text-align: center;
+    }
+}
+
+        </style>
+
+{% endblock content %}

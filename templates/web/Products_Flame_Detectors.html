@@ -1,0 +1,308 @@
+{% extends 'web/basic.html' %} 
+{% load static %}
+
+{% block content %}
+
+    <section class="hero-section">
+        <h1>FLAME DETECTORS</h1>
+    </section>
+    
+    <style>
+    .hero-section {
+        position: relative;
+        background: url('{% static "image/Flame.png" %}') no-repeat center center/cover;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: white;
+    }
+    
+    .hero-section h1 {
+        position: relative;
+        font-size: 2.5rem;
+        font-weight: bold;
+        text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7); /* Text ke piche halka shadow */
+    }
+    
+    @media (max-width: 768px) {
+        .hero-section {
+            height: 70vh; /* Mobile ke liye height adjust */
+        }
+        
+        .hero-section h1 {
+            font-size: 2rem; /* Mobile par text thoda chhota */
+        }
+    }
+    </style>
+
+<section class="detection-products-section">
+    <h2>DURABLE AND RELIABLE DETECTION</h2>
+    <div class="text-container">
+        <p>ESP Safety’s SIL-3 rated flame detectors offer protection for critical areas where reliability is demanded. With thousands of units deployed, years of experience in fire detection ensure that each device detects fires fast while eliminating false alarms.</p>
+        <p>To provide early fire detection for variety of applications we offer three optical types of detectors:</p>
+        <p>– Multi-Spectrum Triple IR (IR3),</p>
+        <p>– Infrared and Ultraviolet (IR/UV),</p>
+        <p>- Ultraviolet (UV) only.</p>
+        <p>All ESP Safety’s types of flame detectors have different flame detection range and application depending on the required specifications. The IPES IR3 and IPES IRUV flame detectors are recommended for fires that are hydrocarbon-based fuel sourced fires. The IPES UV flame detector is recommended for hydrogen-based fuel sourced fires. The IPES IR3 flame detector has the longest flame detection range of 210 feet. The IPES IRUV detector has a flame detection range of 100 feet. The IPES UV flame detector, which is recommended for hydrogen-based fuels, has a flame detection range of 100 feet.</p>
+        <p>IPES flame detectors have a field of view of 90 degrees and come standard with a mounting bracket and a rubber sunshield visor. We specialize in devices for hazardous locations, and our explosion-proof flame detectors are rated for use in Class 1 Div 1 industrial environments. Each unit comes standard with multiple outputs (4-20 mA, Modbus, relays, HART) and can be integrated into any addressable or conventional fire panel.</p>
+        <p>To ensure that our devices are continuously monitoring fire hazards, the IPES flame detector series has a built-in self-test, detects if there is an obstruction within its field of view, and can be tested in the field with a flame simulator test lamp, the ITES test lamp. The ITES test lamp is used to perform periodic maintenance tests and confirm the response of the flame detector’s alarm to a simulated flame once the detectors have been installed.</p>
+        <p>If you have any questions or would like to know more about which flame detector is best for your needs, contact ESP Safety. Our representatives will assist you in choosing the best flame detector for your application.</p>
+    </div>
+
+    <div class="products-grid">
+        <div class="product-item">
+            <img src="{% static 'image/flame-icon-red.png' %}" alt="Flame Detectors">
+            <p>Multi Spectral</p>
+        </div>
+        <div class="product-item">
+            <img src="{% static 'image/flame-icon-red.png' %}" alt="Oxygen Detectors">
+            <p>Infrared</p>
+        </div>
+        <div class="product-item">
+            <img src="{% static 'image/flame-icon-red.png' %}" alt="Combustible Gas Detectors">
+            <p>Ultraviolet</p>
+        </div>
+    </div>
+</section>
+
+<style>
+    .detection-products-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 50px 20px;
+        background-color: #fff;
+    }
+    
+    h2 {
+        font-size: 28px;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+    
+    .text-container {
+        max-width: 95%;
+    }
+    
+    .text-container p {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+    
+    .text-container p:nth-child(3),
+    .text-container p:nth-child(4),
+    .text-container p:nth-child(5) {
+        font-weight: bold;
+    }
+
+    .products-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 50px;
+        margin-top: 40px;
+    }
+    
+    .product-item {
+        display: flex;
+        align-items: center;
+        font-size: 20px;
+        font-weight: bold;
+        transition: transform 0.3s ease;
+        gap: 15px;
+    }
+    
+    .product-item img {
+        width: 70px;
+        height: 70px;
+        padding: 10px;
+    }
+    
+    .product-item p {
+        font-size: 22px;
+        margin-top: 0;
+    }
+    
+    .product-item:hover {
+        transform: scale(1.1);
+    }
+    
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .text-container {
+            max-width: 90%;
+        }
+    
+        h2 {
+            font-size: 24px;
+        }
+    
+        .text-container p {
+            font-size: 14px;
+        }
+
+        .products-grid {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+</style>
+
+<section class="flame-detectors-section">
+    <h2>COMPARE OUR FLAME DETECTORS</h2>
+    <div class="detectors-grid">
+        <div class="detector-item">
+            <img src="{% static 'image/flame-detector.jpg' %}" alt="IPES IR3">
+            <div class="detector-info">
+                <h3>IPES IR3</h3>
+                <div class="detector-features">
+                    <div><img src="{% static 'image/flame-icon-red.png' %}" alt=""><span>Multi-Infrared flame detector offers the best protection against false alarms</span></div>
+                    <div><img src="{% static 'image/flame-icon-red.png' %}" alt=""><span>Maximum area coverage</span></div>
+                    <div><img src="{% static 'image/flame-icon-red.png' %}" alt=""><span>The longest detection distance up to 210 feet</span></div>
+                </div>
+            </div>
+            <a href="#" class="learn-more-btn">LEARN MORE</a>
+        </div>
+
+        <div class="detector-item">
+            <img src="{% static 'image/flame-detector1.jpg' %}" alt="IPES IR4000">
+            <div class="detector-info">
+                <h3>IPES IR4000</h3>
+                <div class="detector-features">
+                    <div><img src="{% static 'image/flame-icon-red.png' %}" alt=""><span>120° field of view (FOV) provides a wider area of coverage</span></div>
+                    <div><img src="{% static 'image/flame-icon-red.png' %}" alt=""><span>Multi-spectral IR detection provides the highest level of flame and fire sensitivity</span></div>
+                    <div><img src="{% static 'image/flame-icon-red.png' %}" alt=""><span>Detection distance up to 345 feet</span></div>
+                </div>
+            </div>
+            <a href="#" class="learn-more-btn">LEARN MORE</a>
+        </div>
+
+        <div class="detector-item no-image">
+            <div class="detector-info">
+                <h3>IPES IR/UV</h3>
+                <div class="detector-features">
+                    <div><img src="{% static 'image/flame-icon-red.png' %}" alt=""><span>Dual Spectrum flame detector recognizes hydrocarbon-based fires fast</span></div>
+                    <div><img src="{% static 'image/flame-icon-red.png' %}" alt=""><span>Detection range up to 100 feet</span></div>
+                    <div><img src="{% static 'image/flame-icon-red.png' %}" alt=""><span>Proven technology with over 50 years of field installations</span></div>
+                </div>
+            </div>
+            <a href="#" class="learn-more-btn">LEARN MORE</a>
+        </div>
+
+        <div class="detector-item">
+            <img src="{% static 'image/flame-detector2.jpg' %}" alt="IPES IR/UV">
+            <div class="detector-info">
+                <h3>IPES UV</h3>
+                <div class="detector-features">
+                    <div><img src="{% static 'image/flame-icon-red.png' %}" alt=""><span>Ideal for detection of hydrogen based fires</span></div>
+                    <div><img src="{% static 'image/flame-icon-red.png' %}" alt=""><span>Optimal flame detection for metal and pyrophoric based fires</span></div>
+                    <div><img src="{% static 'image/flame-icon-red.png' %}" alt=""><span>Fast response time 1 to 2 seconds</span></div>
+                </div>
+            </div>
+            <a href="#" class="learn-more-btn">LEARN MORE</a>
+        </div>
+    </div>
+</section>
+
+<style>
+    .flame-detectors-section {
+        text-align: center;
+        padding: 50px 20px;
+        background-color: #f4f4f4;
+    }
+    .detectors-grid {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+    .detector-item {
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        overflow: hidden;
+        text-align: left;
+        width: 30%;
+        min-width: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .detector-item img {
+        width: 100%;
+        height: auto;
+    }
+
+    .detector-info {
+        padding: 20px;
+        background: black;
+        color: white;
+        flex-grow: 1;
+    }
+    .detector-info h3 {
+        margin-bottom: 10px;
+    }
+    .detector-features {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .detector-features div {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    .detector-features img {
+    width: 30px;
+    height: 30px;
+    filter: hue-rotate(60deg) brightness(1.2);
+    }
+    .detector-features span {
+    color: #96883a; /* Yellow color matching the image filter */
+}
+
+    .learn-more-btn {
+        display: block;
+        padding: 10px 20px;
+        border: 2px solid #d61c22;
+        color: #d61c22;
+        text-decoration: none;
+        font-weight: bold;
+        text-align: center;
+        transition: background 0.3s, color 0.3s;
+        margin: 15px auto;
+        width: 80%;
+        border-radius: 5px;
+    }
+    .learn-more-btn:hover {
+        background: #d61c22;
+        color: #fff;
+    }
+    .no-image {
+        min-height: auto;
+        height: auto;
+        display: inline-block;
+    }
+
+    @media (max-width: 1024px) {
+        .detector-item {
+            width: 45%;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .detectors-grid {
+            flex-direction: column;
+            align-items: center;
+        }
+        .detector-item {
+            width: 90%;
+        }
+    }
+</style>
+
+{% endblock content %}
